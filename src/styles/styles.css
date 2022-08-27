@@ -69,10 +69,12 @@
     100% { background-position: 0 0; }
 }
 
-.nav{
+.nav-nav{
+
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
+    width: 100%;
+   
 }
 
 .container-items{
@@ -80,6 +82,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 5%;
 }
 
 .title-name{
@@ -118,4 +121,12 @@
     padding-top: 10px;
     align-self: flex-start;
     font-family: monospace;
+}
+
+.nav-img{
+    display: flex;
+    font-size: 80px;
+    color: white;
+    justify-content: space-between;
+  
 }
