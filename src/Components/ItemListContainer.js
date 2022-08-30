@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
-import ListGroup from "react-bootstrap/ListGroup";
+import PopoverPositionedExample from "./PopoverPositionedExample";
 
 const ItemListContainer = ({ nameEcommerce }) => {
   const stock = 15;
@@ -42,6 +42,10 @@ const ItemListContainer = ({ nameEcommerce }) => {
                 title={product.description}
               ></img>
               <p className="price">${product.price}</p>
+
+              <PopoverPositionedExample
+                description={product.description}
+              />
             </div>
           );
         })}

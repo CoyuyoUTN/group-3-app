@@ -5,7 +5,7 @@
     height: 300vh;
     display: flex;
     flex-direction: column;
-    background-color:#61481C ;
+    background-color:#16213E ;
    
 }
 
@@ -14,7 +14,8 @@
     display: flex;
     justify-content:space-between;
     width: 100%;
-     background-color: #E6B325;
+     background-color: #0F3460;
+   
 }
 .nav-img{
    
@@ -24,7 +25,7 @@
     color: black;
     font-size: 40px;
     border-radius: 50%;
-background-color: #BF9742;
+background-color: #533483;
 }
 
 .title-name{
@@ -56,10 +57,10 @@ background-color: #BF9742;
 .button-text{
     margin-top: -50px;
     margin-right: 80px;
-    color: rgb(146, 0, 0);
+    color: rgb(0, 0, 0);
     font-weight: 700;
     align-self: flex-start;
-    background-color: #c98b22;
+    background-color: #533483;
     height: 30px;
     width: 30px;
     text-align: center;
@@ -70,12 +71,14 @@ background-color: #BF9742;
     margin-right: -100px;
     text-align: center;
     font-size: 20px;
+    font-weight: 500;
+    color: rgb(255, 248, 248);
 }
 
 
 
 .button-34 {
-  background: #b17507;
+  background: #533483;
   border-radius: 999px;
   box-shadow: #c0c0c4 0 10px 20px -10px;
   box-sizing: border-box;
@@ -121,10 +124,11 @@ background-color: #BF9742;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     width: 33%;
     height: 5%;
     z-index: 15;
-    opacity: 0.3;
+    opacity: 0.5;
     font-weight: 600;
    
     
