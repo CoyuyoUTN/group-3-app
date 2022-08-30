@@ -2,7 +2,7 @@ import ItemListContainer from "./Components/ItemListContainer";
 import NavBar from "./Components/NavBar";
 
 function App() {
-  const name = "Tiendita";
+  const name = "G&&G";
   return (
     <div className="App">
       <NavBar />
