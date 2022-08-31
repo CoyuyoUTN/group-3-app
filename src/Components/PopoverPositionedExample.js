@@ -5,7 +5,7 @@ import Popover from "react-bootstrap/Popover";
 function PopoverPositionedExample({ description }) {
   return (
     <>
-      {["right"].map((placement) => (
+      {["bottom"].map((placement) => (
         <OverlayTrigger
           trigger="click"
           key={placement}

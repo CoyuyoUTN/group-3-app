@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const ItemCount = ({ Stock, Initial }) => {
   const [count, setCount] = useState(Initial);
 
-  const increment = () => {
+  const increment = useCallback(() => {
     count < Stock && setCount(count + 1);
-  };
+  }, [Stock, count]);
 
-  const decrease = () => {
+  const decrease = useCallback(() => {
     count > Initial && setCount(count - 1);
-  };
+  }, [count, Initial]);
+
   return (
     <div className="container-button">
       <h2 className="title-stock">Add to car </h2>

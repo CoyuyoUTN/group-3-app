@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
 import PopoverPositionedExample from "./PopoverPositionedExample";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ItemListContainer = ({ nameEcommerce }) => {
   const stock = 15;
@@ -8,19 +10,13 @@ const ItemListContainer = ({ nameEcommerce }) => {
   const APIURL = "https://fakestoreapi.com/products";
   const [product, setProduct] = useState([]);
 
-  const get_data = async () => {
-    try {
-      const response = await fetch(APIURL);
-      const json = await response.json();
-      console.log(json);
-      setProduct(json);
-    } catch (error) {
-      console.log("Mensaje de error");
-    }
+  const getproductAxios = async () => {
+    const getAxios = await axios.get(APIURL).catch();
+    setProduct(getAxios.data);
   };
 
   useEffect(() => {
-    get_data();
+    getproductAxios();
   }, []);
 
   return (
@@ -30,7 +26,7 @@ const ItemListContainer = ({ nameEcommerce }) => {
       <div className="container-items-products">
         {product.map((product) => {
           return (
-            <div className="container-clothes">
+            <div className="container-clothes" key={product.id}>
               <h3 className="title-clothe">
                 <span>{product.title}</span>
               </h3>
@@ -43,9 +39,8 @@ const ItemListContainer = ({ nameEcommerce }) => {
               ></img>
               <p className="price">${product.price}</p>
 
-              <PopoverPositionedExample
-                description={product.description}
-              />
+              <PopoverPositionedExample description={product.description} />
+              <Link to="products">About</Link>
             </div>
           );
         })}
