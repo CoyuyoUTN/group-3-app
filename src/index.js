@@ -3,11 +3,11 @@ import App from "./App";
 import "./styles/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
-import { render } from "react-dom";
+import ReactDOM from "react-dom/client";
 
-render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );

@@ -1,6 +1,7 @@
 import ItemListContainer from "./Components/ItemListContainer";
 import NavBar from "./Components/NavBar";
 import { Routes, Route } from "react-router-dom";
+import PrincipalPage from "./Components/PrincipalPage";
 
 function App() {
   const name = "G&&G";
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element="" />
+        <Route path="/" element={<PrincipalPage />} />
         <Route
           path="/products"
           element={<ItemListContainer nameEcommerce={name} />}
@@ -17,7 +18,12 @@ function App() {
           path="/category/:category"
           element={<ItemListContainer nameEcommerce={name} />}
         />
-        <Route path="*" element="404" />
+        <Route
+          path="/:id"
+          element={<ItemListContainer nameEcommerce={name} />}
+        />
+
+        <Route path="*" element={<PrincipalPage />} />
       </Routes>
     </div>
   );

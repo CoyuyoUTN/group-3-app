@@ -3,8 +3,8 @@ import PopoverPositionedExample from "./PopoverPositionedExample";
 
 const Item = ({ title, price, id, category, description, image }) => {
   return (
-    <Link to={`/item/${id}`}>
-      <div className="container-clothes" key={id}>
+    <div key={id} className="container-clothes">
+      <Link to={`/${id}`}>
         <h3 className="title-clothe">
           <span>{title}</span>
         </h3>
@@ -14,13 +14,12 @@ const Item = ({ title, price, id, category, description, image }) => {
           height="120"
           width="120"
           title={description}
-        ></img>
+        />
         <p className="price">${price}</p>
-
-        <PopoverPositionedExample description={description} />
-        <Link to="products">About</Link>
-      </div>
-    </Link>
+      </Link>
+      <PopoverPositionedExample description={description} />
+    </div>
   );
 };
+
 export default Item;
