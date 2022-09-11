@@ -49,30 +49,30 @@ background-color: #533483;
 .container-button{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
     
 }
 
 .button-text{
-    margin-top: -50px;
-    margin-right: 80px;
+
     color: rgb(0, 0, 0);
     font-weight: 700;
-    align-self: flex-start;
+    align-self: center;
     background-color: #533483;
     height: 30px;
     width: 30px;
     text-align: center;
+    margin-left: 15px;
 }
 
 .title-stock{
-    margin-top: -50px;
-    margin-right: -100px;
+
     text-align: center;
     font-size: 20px;
     font-weight: 500;
     color: rgb(255, 248, 248);
+    margin-right: 15px;
 }
 
 
@@ -80,7 +80,6 @@ background-color: #533483;
 .button-34 {
   background: #533483;
   border-radius: 999px;
-  box-shadow: #c0c0c4 0 10px 20px -10px;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
@@ -90,22 +89,22 @@ background-color: #533483;
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
-  margin-top: 10px;
-  margin-left: 10px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: fit-content;
   word-break: break-word;
   border: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .buttons{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    margin-right: -80px;
+    justify-content: center;
      text-align: center;
+   
   
 }
 
@@ -148,4 +147,69 @@ background-color: #533483;
   .price{
     color: #fff;
     font-size: 25px;
+  }
+
+
+  .item-alone{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+  }
+
+  .item-alone-img{
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-alone-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item-detail-description{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 250px;
+  }
+
+  .price-alone{
+    font-size: 80px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .title-clothe-alone{
+
+    color: #fff;
+    text-decoration: underline;
+    font-size: 60px;
+    align-self: flex-start;
+   
+  }
+
+  .div-separate{
+    height: 120px;
+  }
+
+  .principal-page-info{
+    align-self: center;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding-top: 100px;
+    font-size: 50px;
+    text-decoration: underline;
+   
   }

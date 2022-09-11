@@ -2,6 +2,7 @@ import ItemListContainer from "./Components/ItemListContainer";
 import NavBar from "./Components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import PrincipalPage from "./Components/PrincipalPage";
+import ItemDetailContainer from "./Components/ItemDetailContainer";
 
 function App() {
   const name = "G&&G";
@@ -18,11 +19,7 @@ function App() {
           path="/category/:category"
           element={<ItemListContainer nameEcommerce={name} />}
         />
-        <Route
-          path="/:id"
-          element={<ItemListContainer nameEcommerce={name} />}
-        />
-
+        <Route path="/:id" element={<ItemDetailContainer />} />
         <Route path="*" element={<PrincipalPage />} />
       </Routes>
     </div>

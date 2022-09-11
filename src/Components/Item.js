@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PopoverPositionedExample from "./PopoverPositionedExample";
 
 const Item = ({ title, price, id, category, description, image }) => {
   return (
@@ -17,7 +16,6 @@ const Item = ({ title, price, id, category, description, image }) => {
         />
         <p className="price">${price}</p>
       </Link>
-      <PopoverPositionedExample description={description} />
     </div>
   );
 };

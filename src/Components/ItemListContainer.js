@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
-
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
@@ -11,8 +10,8 @@ const ItemListContainer = ({ nameEcommerce }) => {
   const APIURL = "https://fakestoreapi.com/products";
 
   const [product, setProduct] = useState([]);
-  const { category, id } = useParams();
-  console.log(category, id);
+  const { category } = useParams();
+  console.log(category);
 
   const getProductsAxios = async () => {
     const getAxios = await axios.get(APIURL).catch(function (error) {
@@ -34,8 +33,6 @@ const ItemListContainer = ({ nameEcommerce }) => {
       setProduct(
         getAxios.data.filter((product) => product.category === category)
       );
-    } else if (id) {
-      setProduct(getAxios.data.filter((product) => product.id === id));
     } else {
       setProduct(getAxios.data);
     }
@@ -43,12 +40,13 @@ const ItemListContainer = ({ nameEcommerce }) => {
 
   useEffect(() => {
     getProductsAxios();
-  }, [category, id]);
+  }, [category]);
 
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA", product);
   return (
     <div className="container-items">
       <h1 className="title-name">{nameEcommerce}</h1>
-      <ItemCount Stock={stock} Initial={initial} />
+
       <ItemList products={product} />
     </div>
   );
